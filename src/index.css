@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+*{
+  font-family: "Space Grotesk", sans-serif;
+}
+
+body {
+  cursor: none;
+}
+
+/* Custom cursor element */
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.08s ease-out;
+  mix-blend-mode: difference; /* key for inverted effect */
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 5s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
