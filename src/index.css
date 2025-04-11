@@ -83,3 +83,37 @@
   animation: pulseDot 3s ease-in-out infinite;
 }
 
+@layer utilities {
+  @media (hover: hover) {
+    .hover-supported\:opacity-0 {
+      opacity: 0;
+    }
+    .hover-supported\:group-hover\:opacity-100:hover .group-hover\:opacity-100 {
+      opacity: 1;
+    }
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float 4s ease-in-out infinite;
+  animation-delay: 2s;
+}
+
+.contact-svg-wrapper {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 4rem;
+}

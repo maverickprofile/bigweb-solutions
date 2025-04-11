@@ -5,7 +5,7 @@ const portfolioItems = [
   {
     title: "Future Landing Page",
     category: "WEB DESIGN",
-    image: "/12216601_4905662.jpg",
+    image: "/creative-business-landing-page_52683-60296.jpg",
   },
   {
     title: "AI Automation Dashboard",
@@ -58,10 +58,14 @@ const Portfolio = () => {
           />
         
           {/* Overlay Content */}
-          <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center text-white opacity-0 group-hover:opacity-100 transition-all duration-500 z-10">
-            <h4 className="text-xl font-semibold">{item.title}</h4>
-            <p className="text-sm text-gray-200 mt-1">{item.category}</p>
-          </div>
+          {/* Overlay Content */}
+<div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center text-white 
+  opacity-0 transition-all duration-500 z-10 group-hover:opacity-100 hover-supported:opacity-0 hover-supported:group-hover:opacity-100"
+>
+  <h4 className="text-lg sm:text-xl font-semibold">{item.title}</h4>
+  <p className="text-xs sm:text-sm text-gray-200 mt-1">{item.category}</p>
+</div>
+
         
           {/* Bottom Text Info (Hide on Hover) */}
           <div className="absolute bottom-0 left-0 right-0 p-4 bg-white transition-all duration-500 group-hover:translate-y-full">

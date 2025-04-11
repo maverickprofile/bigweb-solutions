@@ -51,14 +51,14 @@ const Navbar = () => {
               href={`#${item.toLowerCase()}`}
               className={`relative text-[18px] font-medium group transition-all duration-300 ${
                 item === 'Home'
-                  ? 'text-[#7A61F8]'
+                  ? 'bg-gradient-to-r from-[#7A63F5] to-[#159BF0] inline-block text-transparent bg-clip-text'
                   : scrolled
                   ? 'text-black'
                   : 'text-white'
               }`}
             >
               {item}
-              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#7A61F8] transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-gradient-to-r from-[#7A63F5] to-[#159BF0] transition-all duration-300 group-hover:w-full"></span>
             </a>
           ))}
         </nav>
@@ -105,7 +105,7 @@ const Navbar = () => {
             <a
               key={item}
               href={`#${item.toLowerCase()}`}
-              className="block text-gray-700 hover:text-[#7A61F8] text-lg transition duration-300"
+              className="block text-gray-700 hover:bg-gradient-to-r from-[#7A63F5] to-[#159BF0] text-lg transition duration-300"
             >
               {item}
             </a>
