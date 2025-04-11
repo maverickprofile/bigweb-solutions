@@ -1,26 +1,84 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { BookOpen, Globe, PenTool } from "lucide-react";
+import {
+  BookOpen,
+  Globe,
+  PenTool,
+  Monitor,
+  TrendingUp,
+  Megaphone,
+  User,
+  Package,
+  ShoppingCart,
+  Smartphone,
+  Film,
+  Brush,
+  Share2,
+} from "lucide-react";
+import { title } from "framer-motion/client";
 
 const services = [
   {
-    icon: BookOpen,
-    title: "Branding design",
-    description:
-      "Elevating brands through tailored and impactful design solutions.",
+    icon: Monitor,
+    title: "Website Design & Development",
+    description: "Modern and responsive web designs tailored to your brand identity."
   },
   {
-    icon: Globe,
-    title: "Web & Mobile Development",
-    description:
-      "Empowering digital innovation through expert Web & Mobile Development services.",
+    icon: TrendingUp,
+    title: "SEO",
+    description: "Boost your search rankings and drive organic traffic with proven SEO strategies."
+  },
+  {
+    icon: Megaphone,
+    title: "Google Ads",
+    description: "Targeted Google Ads campaigns to increase visibility and conversions."
+  },
+  {
+    icon: Megaphone,
+    title: "Meta Ads",
+    description: "Engaging Meta Ads to reach your audience effectively."
+  },
+  {
+    icon: Film,
+    title: "Video Editing",
+    description: "Engaging video edits crafted to tell your story and boost engagement."
+  },
+  {
+    icon: Film, 
+    title: "Video Production",
+    description: "High-quality video production services for all your marketing needs."
   },
   {
     icon: PenTool,
-    title: "UI/UX Design",
-    description:
-      "Crafting intuitive and visually compelling digital experiences for users.",
+    title: "Social Media Marketing",
+    description: "Comprehensive social media strategies to enhance your online presence."
   },
+  {
+    icon: Brush,
+    title: "Graphic Design",
+    description: "Creative graphic designs for marketing, branding, and digital content."
+  },
+  {
+    icon: Share2,
+    title: "Branding",
+    description: "Comprehensive branding solutions to establish a strong market presence."
+  },
+  {
+    icon: Package,
+    title: "Packaging & Mockups",
+    description: "Custom packaging designs and mockups to elevate your product presentation."
+  },
+  
+  {
+    icon: ShoppingCart,
+    title: "E-Commerce",
+    description: "Launch and scale your online store with powerful Shopify and WooCommerce setups."
+  },
+  {
+    icon: Smartphone,
+    title: "Mobile App Development",
+    description: "Custom mobile app development for iOS and Android platforms."
+  }
 ];
 
 const fadeUp = {
@@ -29,8 +87,8 @@ const fadeUp = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.3,
-      duration: 0.8,
+      delay: i * 0.1,
+      duration: 0.6,
       ease: [0.25, 0.46, 0.45, 0.94],
     },
   }),
@@ -38,26 +96,26 @@ const fadeUp = {
 
 const WhatWeDo = () => {
   return (
-    <section className="bg-[#7A61F8] text-white py-20 px-6 sm:px-10 lg:px-32">
+    <section className="bg-gradient-to-br from-[#7763F8] via-[#7A61F8] to-[#1E9CF2] text-white py-20 px-6 sm:px-10 lg:px-32" id="services">
       {/* Header */}
-      <div className="flex justify-between items-start mb-12 flex-wrap gap-y-4">
+      <div className="flex justify-between items-start mb-16 flex-wrap gap-y-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <p className="uppercase text-xs tracking-widest font-medium mb-2">
-            What we do
+          <p className="uppercase text-xs tracking-widest font-semibold text-[#2C2C2C] mb-2">
+            What We Do
           </p>
-          <h2 className="text-3xl sm:text-4xl font-semibold leading-snug max-w-3xl">
+          <h2 className="text-3xl sm:text-4xl font-bold leading-snug max-w-3xl">
             Our promise is to deliver a service <br /> that surpasses all expectations.
           </h2>
         </motion.div>
 
         <motion.a
           href="#"
-          className="text-sm font-medium flex items-center gap-1 hover:underline"
+          className="text-sm font-medium flex items-center gap-2 text-white hover:text-[#1E9CF2] transition-colors"
           initial={{ opacity: 0, x: 20 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
@@ -76,8 +134,8 @@ const WhatWeDo = () => {
         </motion.a>
       </div>
 
-      {/* Service List */}
-      <div className="space-y-8">
+      {/* Service Cards Grid */}
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => {
           const Icon = service.icon;
           return (
@@ -88,21 +146,20 @@ const WhatWeDo = () => {
               whileInView="visible"
               variants={fadeUp}
               viewport={{ once: true }}
-              className="group flex items-start gap-6 border-t border-black pt-6 transition-all duration-300 ease-in-out hover:bg-[#45378A] hover:text-white cursor-pointer px-4 py-4 rounded-xl"
+              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20 hover:shadow-xl hover:shadow-[#1E9CF2]/40 transition-all duration-300 cursor-pointer group"
             >
-              <Icon className="w-10 h-10 text-black group-hover:text-white transition-colors duration-300" />
-              <div>
-                <h4 className="text-lg text-black font-semibold mb-1 group-hover:text-white transition-colors duration-300">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="bg-white/20 p-3 rounded-full">
+                  <Icon className="w-7 h-7 text-white" />
+                </div>
+                <h4 className="text-lg font-semibold text-white group-hover:text-white transition-colors">
                   {service.title}
                 </h4>
-                <p className="text-sm text-black/70 group-hover:text-white/90 transition-colors duration-300 max-w-md">
-                  {service.description}
-                </p>
               </div>
+              <p className="text-sm text-white/80">{service.description}</p>
             </motion.div>
           );
         })}
-        <div className="border-t border-black pt-6" />
       </div>
     </section>
   );

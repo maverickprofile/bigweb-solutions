@@ -1,5 +1,5 @@
 import React from 'react';
-import CustomeCursor from './components/CustomCursor';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
 import TrustedBy from './components/TrustedBy';
@@ -11,14 +11,12 @@ import BookSection from './components/BookSection';
 import Footer from './components/Footer';
 import Testimonials from './components/Testimonials';
 import Expertise from './components/Expertise';
-import { Book } from 'lucide-react';
+import Contact from './pages/Contact'; // Contact page
 
-
-
-function App() {
+// Removed CustomCursor import and component
+function HomePage() {
   return (
     <>
-      <CustomeCursor />
       <Navbar />
       <HeroSection />
       <Brands />
@@ -28,8 +26,18 @@ function App() {
       <Testimonials />
       <BookSection />
       <Footer />
-      {/* Add more sections here */}
     </>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
 }
 

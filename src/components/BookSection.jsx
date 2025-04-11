@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const BookSection = () => {
   return (
-    <section className="bg-gradient-to-r from-[#f5edff] via-[#fdf6ff] to-[#f5edff] py-20 px-6 sm:px-10 lg:px-32 overflow-hidden">
+    <section className="bg-white py-20 px-6 sm:px-10 lg:px-32 overflow-hidden">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -26,6 +26,7 @@ const BookSection = () => {
           <p className="text-gray-800 text-sm sm:text-base mb-6">
             This is a placeholder text for the consultation call to action that can be a few lines in length.
           </p>
+          <a href="https://calendly.com/bigweb19">
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -33,6 +34,8 @@ const BookSection = () => {
           >
             Book Now <CalendarDays className="w-4 h-4" />
           </motion.button>
+          </a>
+          
         </motion.div>
 
         {/* Image Section */}
