@@ -55,7 +55,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 z-0 animate-gradient bg-gradient-to-r from-[#7A63F5] via-[#159BF0] to-[#7763F8] opacity-20 blur-2xl" />
 
       {/* 🖤 Black Transparent Overlay */}
-      <div className="absolute inset-0 bg-black opacity-8 z-10"></div>
+      <div className="absolute inset-0 bg-black opacity-12 z-10"></div>
 
       {/* 🌟 Content */}
       <div className="max-w-4xl w-full text-center z-20 relative">
