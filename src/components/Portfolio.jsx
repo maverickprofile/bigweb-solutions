@@ -1,26 +1,27 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
+import { video } from "framer-motion/client";
 
 const portfolioItems = [
   {
     title: "Future Landing Page",
     category: "WEB DESIGN",
-    image: "/creative-business-landing-page_52683-60296.jpg",
+    video: "/portfoliio1.mp4",
   },
   {
     title: "AI Automation Dashboard",
     category: "UI UX",
-    image: "/pexels-tara-winstead-8386356.jpg",
+    video: "/portfolio2.mp4",
   },
   {
     title: "Minimal Portfolio Showcase Application",
     category: "MOBILE APP",
-    image: "/preview-2_1741840462306.png",
+    video: "/portfolio3.mp4",
   },
   {
     title: "Clean Show Business Card Mockup",
     category: "BRANDING",
-    image: "/Free_Business_Card_Mockup_psd.jpg",
+    video: "/portfolio4.mp4",
   },
 ];
 
@@ -49,36 +50,43 @@ const Portfolio = () => {
       {/* Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
         {portfolioItems.map((item, index) => (
-          <div key={index} className="group relative overflow-hidden ">
-          {/* Image */}
-          <img
-            src={item.image}
-            alt={item.title}
-            className=" w-full h-[300px] sm:h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
-          />
-        
-          {/* Overlay Content */}
-          {/* Overlay Content */}
-<div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center text-white 
-  opacity-0 transition-all duration-500 z-10 group-hover:opacity-100 hover-supported:opacity-0 hover-supported:group-hover:opacity-100"
->
-  <h4 className="text-lg sm:text-xl font-semibold">{item.title}</h4>
-  <p className="text-xs sm:text-sm text-gray-200 mt-1">{item.category}</p>
-</div>
+          <div key={index} className="group relative overflow-hidden rounded-xl shadow-lg">
+            {/* Media */}
+            {item.video ? (
+              <video
+                src={item.video}
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="w-full h-[300px] sm:h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            ) : (
+              <img
+                src={item.image}
+                alt={item.title}
+                className="w-full h-[300px] sm:h-[400px] object-cover transition-transform duration-500 group-hover:scale-110"
+              />
+            )}
 
-        
-          {/* Bottom Text Info (Hide on Hover) */}
-          <div className="absolute bottom-0 left-0 right-0 p-4 bg-white transition-all duration-500 group-hover:translate-y-full">
-            <div className="flex justify-between items-center">
-              <div>
-                <h4 className="text-base font-semibold text-black">{item.title}</h4>
-                <p className="text-xs text-gray-500">{item.category}</p>
+            {/* Overlay Content */}
+            <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center text-white 
+              opacity-0 transition-all duration-500 z-10 group-hover:opacity-100">
+              <h4 className="text-lg sm:text-xl font-semibold">{item.title}</h4>
+              <p className="text-xs sm:text-sm text-gray-200 mt-1">{item.category}</p>
+            </div>
+
+            {/* Bottom Text Info (Hide on Hover) */}
+            <div className="absolute bottom-0 left-0 right-0 p-4 bg-white transition-all duration-500 group-hover:translate-y-full">
+              <div className="flex justify-between items-center">
+                <div>
+                  <h4 className="text-base font-semibold text-black">{item.title}</h4>
+                  <p className="text-xs text-gray-500">{item.category}</p>
+                </div>
+                <ArrowUpRight className="w-4 h-4 text-black" />
               </div>
-              <ArrowUpRight className="w-4 h-4 text-black" />
             </div>
           </div>
-        </div>
-        
         ))}
       </div>
     </section>

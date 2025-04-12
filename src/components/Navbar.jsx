@@ -28,27 +28,26 @@ const Navbar = () => {
         scrolled ? 'bg-white shadow-md' : 'bg-[#101010]'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 py-4 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 py-2 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center">
-        <img
-    src={scrolled ? '/bws_logo_1-removebg-preview (1).png' : '/bws_logo-removebg-preview (1).png'}
-    alt="Logo"
-    className="h-12 w-auto transition-all duration-300"
-  />
-          <span className={`text-xl font-bold text-[30px] ml-2 transition-all duration-300 ${
-            scrolled ? 'text-black' : 'text-white'
-          }`}>
-            BigWeb
-          </span>
-        </div>
+        <a href="#" className="flex items-center">
+          <img
+            src={
+              scrolled
+                ? '/bigweb_updated_logo__1_-removebg-preview (1).png'
+                : '/bigweb_updated_logo-removebg-preview (1).png'
+            }
+            alt="Logo"
+            className="h-14 w-auto transition-all duration-300"
+          />
+        </a>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center space-x-8">
           {['Home', 'About', 'Portfolio', 'Services'].map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={item === 'Home' ? '#' : `#${item.toLowerCase()}`}
               className={`relative text-[18px] font-medium group transition-all duration-300 ${
                 item === 'Home'
                   ? 'bg-gradient-to-r from-[#7A63F5] to-[#159BF0] inline-block text-transparent bg-clip-text'
@@ -104,7 +103,7 @@ const Navbar = () => {
           {['Home', 'About', 'Portfolio', 'Services'].map((item) => (
             <a
               key={item}
-              href={`#${item.toLowerCase()}`}
+              href={item === 'Home' ? '#' : `#${item.toLowerCase()}`}
               className="block text-gray-700 hover:bg-gradient-to-r from-[#7A63F5] to-[#159BF0] text-lg transition duration-300"
             >
               {item}

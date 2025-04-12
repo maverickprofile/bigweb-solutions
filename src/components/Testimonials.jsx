@@ -4,36 +4,37 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "The team effectively met deadlines and gave a lot of importance to processes that made our team's life much easier and allowed us to trust the team with deliverables without too much interference.",
-    name: "Bhavana R.",
-    business: "Mid market",
+    quote: "BigWeb transformed our online presence — from a stunning website to SEO that actually ranks. We’ve seen a 3x jump in leads in just two months!",
+    name: "Aman S.",
+    business: "Startup Founder",
   },
   {
-    quote: "Their tech team is a force to reckon with. Super agile, and collaborative, they bring in tech-enabled processes that will make your processes better and campaigns predictable and measurable.",
-    name: "Pragya P.",
-    business: "Director Social Commerce",
+    quote: "From branding to social media marketing, BigWeb’s team felt like an extension of ours. Super collaborative and results-driven!",
+    name: "Priya D.",
+    business: "Creative Director, DazzleCo",
   },
   {
-    quote: "Love that you guys follow briefs perfectly and ensure brand messaging goes out there in the best way possible. Very easy to work with and great involvement from the team.",
-    name: "Ria M.",
-    business: "Small Business",
+    quote: "We came to BigWeb for a packaging revamp, and they delivered beyond expectations. Clean, modern, and totally on-brand.",
+    name: "Rahul M.",
+    business: "Founder, PlantBox",
   },
   {
-    quote: "Promptness, creativity, a team great to work with and on top of everything, they are at their job what so ever!",
-    name: "Radhika R.",
-    business: "Enterprise",
+    quote: "SEO, Google Ads, Meta Ads — all under one roof! BigWeb gave us an edge with their data-first approach and killer designs.",
+    name: "Sneha T.",
+    business: "E-Commerce Manager",
   },
   {
-    quote: "It's been great. From conceptualization, to execution to final report. The team is very efficient.",
-    name: "Akhila V.",
-    business: "Small Business",
+    quote: "BigWeb’s UI/UX redesign for our app increased retention by 40%. The team is creative, smart, and lightning fast.",
+    name: "Manish K.",
+    business: "Product Head, FitNow",
   },
   {
-    quote: "Great technology with great people. Very approachable people who have the capability to get things done using tech.",
-    name: "Sukriti D.",
-    business: "Enterprise",
+    quote: "We’ve worked with several agencies before, but BigWeb stands out with their professionalism, speed, and top-tier creative output.",
+    name: "Divya L.",
+    business: "Marketing Lead, FinPilot",
   },
 ];
+
 
 const TestimonialCarousel = () => {
   const [currentIndex, setCurrentIndex] = useState(0);

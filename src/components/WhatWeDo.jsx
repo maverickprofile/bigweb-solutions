@@ -109,7 +109,7 @@ const WhatWeDo = () => {
             What We Do
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold leading-snug max-w-3xl">
-            Our promise is to deliver a service <br /> that surpasses all expectations.
+            We deliver a service <br /> that surpasses all expectations.
           </h2>
         </motion.div>
 

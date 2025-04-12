@@ -4,8 +4,7 @@ import { motion } from 'framer-motion';
 const stats = [
   { value: '915+', label: 'Projects Completed' },
   { value: '10', label: 'Years of Experience' },
-  { value: '110+', label: 'Employees' },
-  { value: '2K+', label: 'Happy Customers' },
+  { value: '300+', label: 'World Wide Happy Customers' },
 ];
 
 const AboutUs = () => {
@@ -43,24 +42,25 @@ const AboutUs = () => {
         transition={{ duration: 0.9 }}
         className="text-gray-700 text-[17px] leading-relaxed"
       >
-        At <strong className="text-gray-900">BigWeb</strong>, we specialize in delivering cutting-edge website design, SEO,
-        branding, and digital advertising services. With over a decade of experience, we've helped 900+ businesses
-        establish a powerful online presence. Our in-house experts are dedicated to creating impactful solutions tailored
-        to your brand’s success.
+        At <strong className="text-gray-900">BigWeb</strong>, we craft next-level website design, SEO, branding, and digital advertising solutions that drive real results. With over a decade of digital expertise, we've empowered 100+ businesses worldwide to build bold, unforgettable online identities. Our passionate in-house team blends creativity with strategy to deliver custom-tailored digital experiences that elevate your brand and boost your bottom line.
       </motion.p>
 
       <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        transition={{ duration: 0.7 }}
-        className="w-full overflow-hidden rounded-lg"
-      >
-        <img
-          src="/14463.jpg"
-          alt="Office meeting"
-          className="w-full h-[300px] object-cover rounded-lg shadow-lg"
-        />
-      </motion.div>
+  initial={{ opacity: 0, scale: 0.95 }}
+  whileInView={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.7 }}
+  className="w-full overflow-hidden rounded-lg"
+>
+  <video
+    src="/4145d4a82be8307b48a3e18a8884fefd.mp4"
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="w-full h-[500px] object-cover rounded-lg shadow-lg"
+  />
+</motion.div>
+
     </div>
   </div>
 
@@ -69,7 +69,7 @@ const AboutUs = () => {
     initial={{ opacity: 0, y: 30 }}
     whileInView={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, delay: 0.2 }}
-    className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
+    className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6 text-center"
   >
     {stats.map((stat, index) => (
       <div key={index}>
