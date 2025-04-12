@@ -138,7 +138,7 @@ const HeroSection = () => {
     {services.map((service, i) => (
       <div
         key={i}
-        className="h-[60px] flex items-center justify-center lg:justify-start whitespace-nowrap text-[22px] sm:text-[28px] lg:text-[40px] font-extrabold leading-none px-2 bg-gradient-to-r from-[#7A63F5] to-[#159BF0] text-transparent bg-clip-text"
+        className="h-[60px] flex items-center justify-center lg:justify-start whitespace-nowrap text-[28px] sm:text-[30px] lg:text-[50px] font-extrabold leading-none px-1 bg-gradient-to-r from-[#7A63F5] to-[#159BF0] text-transparent bg-clip-text"
         style={{ height: `${itemHeight}px` }}
       >
         {service}
@@ -163,7 +163,7 @@ const HeroSection = () => {
 
         {/* Right Side - Image */}
         <div className="w-full lg:w-1/2 relative flex items-center justify-center order-first lg:order-none">
-          <div className="absolute w-[300px] h-[300px] md:w-[400px] md:h-[400px] rounded-full bg-gradient-to-br from-[#7A63F5] to-[#159BF0] blur-3xl opacity-40 z-0" />
+          <div className="absolute w-[300px] h-[400px] md:w-[400px] md:h-[400px] rounded-full bg-gradient-to-br from-[#7A63F5] to-[#159BF0] blur-3xl opacity-40 z-0" />
           <img
             src="/ChatGPT_Image_Apr_12__2025__04_53_56_PM-removebg-preview (1).png"
             alt="Hero Visual"
