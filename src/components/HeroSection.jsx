@@ -71,7 +71,7 @@ const HeroSection = () => {
         {/* 📜 Dynamic Scrolling Service List */}
         <div
   ref={containerRef}
-  className="w-full overflow-hidden mt-4 relative text-[28px] sm:text-[28px] lg:text-[60px] font-bold leading-tight"
+  className="w-full overflow-hidden mt-4 relative text-[26px] sm:text-[28px] lg:text-[60px] font-bold leading-tight"
   style={{ height: itemHeight ? `${itemHeight}px` : 'auto' }}
 >
   <div ref={listRef} className="flex flex-col items-center transition-transform duration-500 ease-in-out">
