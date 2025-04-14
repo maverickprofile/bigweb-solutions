@@ -38,7 +38,7 @@ const Navbar = () => {
                 : '/bigweb_updated_logo-removebg-preview (1).png'
             }
             alt="Logo"
-            className="h-14 w-auto transition-all duration-300"
+            className="h-20 w-auto transition-all duration-300"
           />
         </a>
 
