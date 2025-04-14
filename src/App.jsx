@@ -19,7 +19,7 @@ function HomePage() {
     <>
       <Navbar />
       <HeroSection />
-      <Brands />
+      {/* <Brands /> */}
       <AboutUs />
       <Portfolio />
       <WhatWeDo />

@@ -34,7 +34,7 @@ const Navbar = () => {
           <img
             src={
               scrolled
-                ? '/bigweb_updated_logo__1_-removebg-preview (1).png'
+                ? '/bws_updated_logo_black-removebg-preview (1) (1).png'
                 : '/bigweb_updated_logo-removebg-preview (1).png'
             }
             alt="Logo"
