@@ -66,7 +66,7 @@ const HeroSection = () => {
     <section
       className="relative w-full min-h-screen flex items-center justify-center text-center px-0 py-20 bg-cover bg-center overflow-hidden"
       style={{
-        backgroundImage: "url('/Untitled design (15) (1).png')",
+        backgroundImage: "url('/Untitled design (14) (1).png')",
       }}
     >
       {/* Grid Overlay */}

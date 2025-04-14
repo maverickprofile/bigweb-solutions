@@ -11,9 +11,9 @@ const Footer = () => {
           {/* Logo */}
           <div className="flex items-center space-x-3 mb-6 md:mb-0">
             <img
-              src="/bigweb_updated_logo__1_-removebg-preview (1).png"
+              src="/BigWebFullBlack.svg"
               alt="Logo"
-              className="h-25 w-auto"
+              className="h-[200px] w-[300px]"
             />
           </div>
 
@@ -39,11 +39,12 @@ const Footer = () => {
           <div className="text-sm space-y-4">
             <div>
               <p className="font-semibold">Email:</p>
-              <p className="text-gray-600">info@example.com</p>
+              <p className="text-gray-600">support@bigwebsolution.com</p>
             </div>
             <div>
               <p className="font-semibold">Phone:</p>
-              <p className="text-gray-600">US: +1 234 567 8900</p>
+              <p className="text-gray-600">IND +91 98102 34307</p>
+              <p className="text-gray-600">UAE +971 54 551 363</p>
             </div>
             <div className="flex space-x-4 pt-2">
               <a href="#" className="hover:text-gray-800"><FaInstagram size={18} /></a>
