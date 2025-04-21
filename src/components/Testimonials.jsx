@@ -4,32 +4,32 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "BigWeb transformed our online presence — from a stunning website to SEO that actually ranks. We’ve seen a 3x jump in leads in just two months!",
+    quote: "BygWeb transformed our online presence — from a stunning website to SEO that actually ranks. We’ve seen a 3x jump in leads in just two months!",
     name: "Aman S.",
     business: "Startup Founder",
   },
   {
-    quote: "From branding to social media marketing, BigWeb’s team felt like an extension of ours. Super collaborative and results-driven!",
+    quote: "From branding to social media marketing, BygWeb’s team felt like an extension of ours. Super collaborative and results-driven!",
     name: "Priya D.",
     business: "Creative Director, DazzleCo",
   },
   {
-    quote: "We came to BigWeb for a packaging revamp, and they delivered beyond expectations. Clean, modern, and totally on-brand.",
+    quote: "We came to BygWeb for a packaging revamp, and they delivered beyond expectations. Clean, modern, and totally on-brand.",
     name: "Rahul M.",
     business: "Founder, PlantBox",
   },
   {
-    quote: "SEO, Google Ads, Meta Ads — all under one roof! BigWeb gave us an edge with their data-first approach and killer designs.",
+    quote: "SEO, Google Ads, Meta Ads — all under one roof! BygWeb gave us an edge with their data-first approach and killer designs.",
     name: "Sneha T.",
     business: "E-Commerce Manager",
   },
   {
-    quote: "BigWeb’s UI/UX redesign for our app increased retention by 40%. The team is creative, smart, and lightning fast.",
+    quote: "BygWeb’s UI/UX redesign for our app increased retention by 40%. The team is creative, smart, and lightning fast.",
     name: "Manish K.",
     business: "Product Head, FitNow",
   },
   {
-    quote: "We’ve worked with several agencies before, but BigWeb stands out with their professionalism, speed, and top-tier creative output.",
+    quote: "We’ve worked with several agencies before, but BygWeb stands out with their professionalism, speed, and top-tier creative output.",
     name: "Divya L.",
     business: "Marketing Lead, FinPilot",
   },

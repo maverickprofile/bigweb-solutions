@@ -76,14 +76,14 @@ const ContactPage = () => {
             ))}
           </ul>
 
-          <div className="mt-12">
+          {/* <div className="mt-12">
             <h3 className="text-lg font-semibold mb-4 text-[#686DF7]">TRUSTED BY BRANDS</h3>
             <div className="grid grid-cols-3 md:grid-cols-5 gap-4 grayscale hover:grayscale-0 transition duration-300">
               {["fav icon", "fav icon", "fav icon", "fav icon", "fav icon"].map((brand, i) => (
                 <img key={i} src={`./brands/${brand}.svg`} alt={brand} className="h-24" />
               ))}
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Right Form */}

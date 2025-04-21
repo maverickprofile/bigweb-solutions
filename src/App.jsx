@@ -11,9 +11,11 @@ import BookSection from './components/BookSection';
 import Footer from './components/Footer';
 import Testimonials from './components/Testimonials';
 import Expertise from './components/Expertise';
-import Contact from './pages/Contact'; // Contact page
+import Contact from './pages/Contact';
 
-// Removed CustomCursor import and component
+// ✅ New Import: Web Design & Development page
+import WebDesignAndDevelopment from './pages/services/WebDesign-and-Development.jsx';
+
 function HomePage() {
   return (
     <>
@@ -36,6 +38,18 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/contact" element={<Contact />} />
+
+        {/* ✅ New Route for Web Design & Development Page */}
+        <Route
+          path="/services/web-design-and-development"
+          element={
+            <>
+              <Navbar />
+              <WebDesignAndDevelopment />
+              <Footer />
+            </>
+          }
+        />
       </Routes>
     </Router>
   );

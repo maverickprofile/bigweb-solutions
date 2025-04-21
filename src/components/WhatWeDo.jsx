@@ -1,83 +1,119 @@
 import React from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom"; // ✅ Added
 import {
-  BookOpen,
-  Globe,
-  PenTool,
-  Monitor,
-  TrendingUp,
-  Megaphone,
-  User,
-  Package,
-  ShoppingCart,
-  Smartphone,
-  Film,
-  Brush,
-  Share2,
+  BookOpen, Globe, PenTool, Monitor, TrendingUp, Megaphone, User,
+  Package, ShoppingCart, Smartphone, Film, Brush, Share2,
+  UserPlus, Mail, Users, PhoneCall, DollarSign, MessageSquare,
+  Linkedin, Contact2,
 } from "lucide-react";
-import { title } from "framer-motion/client";
 
 const services = [
   {
     icon: Monitor,
     title: "Website Design & Development",
-    description: "Modern and responsive web designs tailored to your brand identity."
+    description: "Modern and responsive web designs tailored to your brand identity.",
+    path: "/services/web-design-and-development", // ✅ Link path
   },
   {
     icon: TrendingUp,
     title: "SEO",
-    description: "Boost your search rankings and drive organic traffic with proven SEO strategies."
+    description: "Boost your search rankings and drive organic traffic with proven SEO strategies.",
   },
   {
     icon: Megaphone,
     title: "Google Ads",
-    description: "Targeted Google Ads campaigns to increase visibility and conversions."
+    description: "Targeted Google Ads campaigns to increase visibility and conversions.",
   },
   {
     icon: Megaphone,
     title: "Meta Ads",
-    description: "Engaging Meta Ads to reach your audience effectively."
+    description: "Engaging Meta Ads to reach your audience effectively.",
   },
   {
     icon: Film,
     title: "Video Editing",
-    description: "Engaging video edits crafted to tell your story and boost engagement."
+    description: "Engaging video edits crafted to tell your story and boost engagement.",
   },
   {
-    icon: Film, 
+    icon: Film,
     title: "Video Production",
-    description: "High-quality video production services for all your marketing needs."
+    description: "High-quality video production services for all your marketing needs.",
   },
   {
     icon: PenTool,
     title: "Social Media Marketing",
-    description: "Comprehensive social media strategies to enhance your online presence."
+    description: "Comprehensive social media strategies to enhance your online presence.",
   },
   {
     icon: Brush,
     title: "Graphic Design",
-    description: "Creative graphic designs for marketing, branding, and digital content."
+    description: "Creative graphic designs for marketing, branding, and digital content.",
   },
   {
     icon: Share2,
     title: "Branding",
-    description: "Comprehensive branding solutions to establish a strong market presence."
+    description: "Comprehensive branding solutions to establish a strong market presence.",
   },
   {
     icon: Package,
     title: "Packaging & Mockups",
-    description: "Custom packaging designs and mockups to elevate your product presentation."
+    description: "Custom packaging designs and mockups to elevate your product presentation.",
   },
-  
   {
     icon: ShoppingCart,
     title: "E-Commerce",
-    description: "Launch and scale your online store with powerful Shopify and WooCommerce setups."
+    description: "Launch and scale your online store with powerful Shopify and WooCommerce setups.",
   },
   {
     icon: Smartphone,
     title: "Mobile App Development",
-    description: "Custom mobile app development for iOS and Android platforms."
+    description: "Custom mobile app development for iOS and Android platforms.",
+  },
+  {
+    icon: UserPlus,
+    title: "Pre Sales",
+    description: "Strategy and support to convert potential leads into loyal customers.",
+  },
+  {
+    icon: Mail,
+    title: "Cold Email",
+    description: "Automated and targeted cold email campaigns to boost outreach.",
+  },
+  {
+    icon: Users,
+    title: "Personal Assistant",
+    description: "Virtual assistance for tasks, scheduling, and efficient workflows.",
+  },
+  {
+    icon: PhoneCall,
+    title: "Call Analysis",
+    description: "Detailed call reviews and performance insights for your sales team.",
+  },
+  {
+    icon: TrendingUp,
+    title: "Consulting",
+    description: "Expert business and marketing consulting tailored to your growth goals.",
+  },
+  {
+    icon: DollarSign,
+    title: "Sales",
+    description: "End-to-end sales support to drive revenue and client acquisition.",
+  },
+  {
+    icon: MessageSquare,
+    title: "WhatsApp",
+    description: "WhatsApp automation and communication tools for customer engagement.",
+  },
+  {
+    icon: Linkedin,
+    title: "LinkedIn",
+    description: "LinkedIn lead generation and profile optimization for professionals.",
+  },
+  {
+    icon: Contact2,
+    title: "Leads",
+    description: "Targeted lead generation strategies to fill your sales pipeline.",
   }
 ];
 
@@ -138,7 +174,7 @@ const WhatWeDo = () => {
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
         {services.map((service, index) => {
           const Icon = service.icon;
-          return (
+          const cardContent = (
             <motion.div
               key={index}
               custom={index}
@@ -158,6 +194,15 @@ const WhatWeDo = () => {
               </div>
               <p className="text-sm text-white/80">{service.description}</p>
             </motion.div>
+          );
+
+          // If service has a path, wrap with Link
+          return service.path ? (
+            <Link to={service.path} key={index}>
+              {cardContent}
+            </Link>
+          ) : (
+            <div key={index}>{cardContent}</div>
           );
         })}
       </div>

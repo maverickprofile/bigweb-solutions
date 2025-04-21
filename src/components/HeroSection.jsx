@@ -9,48 +9,48 @@ const HeroSection = () => {
     "Video Editing", "Video Production", "Social Media Marketing",
     "Content Writing", "UI/UX Designing", "Influencer Marketing",
     "Graphic Designing", "Branding", "Packaging & Mockups", "E-Commerce",
-    "Mobile App Development",
+    "Mobile App Development","Ai-Automation",
     // Repeat for looping animation
     "Website Design", "Website Development", "SEO", "Google Ads", "Meta Ads",
     "Video Editing", "Video Production", "Social Media Marketing",
     "Content Writing", "UI/UX Designing", "Influencer Marketing",
     "Graphic Designing", "Branding", "Packaging & Mockups", "E-Commerce",
-    "Mobile App Development",
+    "Mobile App Development","Ai-Automation",
     "Website Design", "Website Development", "SEO", "Google Ads", "Meta Ads",
     "Video Editing", "Video Production", "Social Media Marketing",
     "Content Writing", "UI/UX Designing", "Influencer Marketing",
     "Graphic Designing", "Branding", "Packaging & Mockups", "E-Commerce",
-    "Mobile App Development",
+    "Mobile App Development","Ai-Automation",
     "Website Design", "Website Development", "SEO", "Google Ads", "Meta Ads",
     "Video Editing", "Video Production", "Social Media Marketing",
     "Content Writing", "UI/UX Designing", "Influencer Marketing",
     "Graphic Designing", "Branding", "Packaging & Mockups", "E-Commerce",
-    "Mobile App Development",
+    "Mobile App Development","Ai-Automation",
     "Website Design", "Website Development", "SEO", "Google Ads", "Meta Ads",
     "Video Editing", "Video Production", "Social Media Marketing",
     "Content Writing", "UI/UX Designing", "Influencer Marketing",
     "Graphic Designing", "Branding", "Packaging & Mockups", "E-Commerce",
-    "Mobile App Development",
+    "Mobile App Development","Ai-Automation",
     "Website Design", "Website Development", "SEO", "Google Ads", "Meta Ads",
     "Video Editing", "Video Production", "Social Media Marketing",
     "Content Writing", "UI/UX Designing", "Influencer Marketing",
     "Graphic Designing", "Branding", "Packaging & Mockups", "E-Commerce",
-    "Mobile App Development",
+    "Mobile App Development","Ai-Automation",
     "Website Design", "Website Development", "SEO", "Google Ads", "Meta Ads",
     "Video Editing", "Video Production", "Social Media Marketing",
     "Content Writing", "UI/UX Designing", "Influencer Marketing",
     "Graphic Designing", "Branding", "Packaging & Mockups", "E-Commerce",
-    "Mobile App Development",
+    "Mobile App Development","Ai-Automation",
     "Website Design", "Website Development", "SEO", "Google Ads", "Meta Ads",
     "Video Editing", "Video Production", "Social Media Marketing",
     "Content Writing", "UI/UX Designing", "Influencer Marketing",
     "Graphic Designing", "Branding", "Packaging & Mockups", "E-Commerce",
-    "Mobile App Development",
+    "Mobile App Development","Ai-Automation",
     "Website Design", "Website Development", "SEO", "Google Ads", "Meta Ads",
     "Video Editing", "Video Production", "Social Media Marketing",
     "Content Writing", "UI/UX Designing", "Influencer Marketing",
     "Graphic Designing", "Branding", "Packaging & Mockups", "E-Commerce",
-    "Mobile App Development",
+    "Mobile App Development","Ai-Automation",
   ];
   const [index, setIndex] = useState(0);
   const itemHeight = 110;
@@ -63,7 +63,7 @@ const HeroSection = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prevIndex) => (prevIndex + 1) % services.length);
-    }, 2000);
+    }, 1200);
     return () => clearInterval(interval);
   }, [services.length]);
 
@@ -91,7 +91,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative w-full min-h-screen flex items-center justify-center text-center px-0 py-20 bg-cover bg-center overflow-hidden"
-      style={{ backgroundImage: "url('/Untitled design (15) (1).png')" }}
+      style={{ backgroundImage: "url('')" }}
     >
       <div className="mt-20 relative z-10 w-full max-w-[100vw] flex flex-col items-center px-4">
         
@@ -152,17 +152,20 @@ const HeroSection = () => {
 
         {/* Description */}
         <p className="mt-6 text-md sm:text-lg text-gray-700 text-center w-full max-w-4xl px-4">
-          <strong className="text-gray-900">BigWeb</strong> specializes in crafting impactful digital Solutions for your brand.
+          <strong className="text-gray-900">BygWeb</strong> specializes in crafting impactful digital Solutions for your brand.
         </p>
 
         {/* CTA Button */}
-        <div ref={buttonRef} className="mt-6">
-          <Link to="/contact">
-            <button className="bg-gradient-to-r from-[#7763F8] to-[#1E9CF2] hover:bg-black text-white flex items-center px-6 py-3 rounded-xl text-lg transition font-medium shadow-md">
-              Get in Touch <ArrowRight className="ml-2 w-5 h-5" />
-            </button>
-          </Link>
-        </div>
+        <div ref={buttonRef} className="mt-6 relative flex justify-center items-center">
+  <div className="absolute inset-0 rounded-full bg-gradient-to-r from-[#7763F8] to-[#1E9CF2] blur-lg opacity-40 scale-110 z-0"></div>
+  <Link to="/contact" className="relative z-10">
+    <button className="inline-flex items-center justify-center px-8 py-3 bg-gradient-to-r from-[#7763F8] to-[#1E9CF2] text-white text-lg font-semibold rounded-full shadow-md transition-all hover:scale-105 hover:shadow-xl">
+      Get in Touch <ArrowRight className="ml-2 w-5 h-5" />
+    </button>
+  </Link>
+</div>
+
+
       </div>
     </section>
   );

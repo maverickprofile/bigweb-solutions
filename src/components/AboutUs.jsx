@@ -42,7 +42,7 @@ const AboutUs = () => {
         transition={{ duration: 0.9 }}
         className="text-gray-700 text-[17px] leading-relaxed"
       >
-        At <strong className="text-gray-900">BigWeb</strong>, we craft next-level website design, SEO, branding, and digital advertising solutions that drive real results. With over a decade of digital expertise, we've empowered 100+ businesses worldwide to build bold, unforgettable online identities. Our passionate in-house team blends creativity with strategy to deliver custom-tailored digital experiences that elevate your brand and boost your bottom line.
+        At <strong className="text-gray-900">BygWeb</strong>, we craft next-level website design, SEO, branding, and digital advertising solutions that drive real results. With over a decade of digital expertise, we've empowered 100+ businesses worldwide to build bold, unforgettable online identities. Our passionate in-house team blends creativity with strategy to deliver custom-tailored digital experiences that elevate your brand and boost your bottom line.
       </motion.p>
 
       <motion.div

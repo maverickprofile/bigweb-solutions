@@ -129,3 +129,50 @@
 .animate-float {
   animation: float 4s ease-in-out infinite;
 }
+
+
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+@keyframes marqueeLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+@keyframes marqueeRight {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marqueeLeft {
+  animation: marqueeLeft 20s linear infinite;
+}
+
+.animate-marqueeRight {
+  animation: marqueeRight 20s linear infinite;
+}
+
+/* Slower speeds for smaller screens */
+@media (max-width: 500px) {
+  .animate-marqueeLeft {
+    animation-duration: 20s !important;
+  }
+
+  .animate-marqueeRight {
+    animation-duration: 20s;
+  }
+}

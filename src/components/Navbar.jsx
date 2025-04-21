@@ -28,17 +28,17 @@ const Navbar = () => {
         scrolled ? 'bg-white shadow-md' : 'bg-[#101010]'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 py-2 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-6 py-1.5 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center">
           <img
             src={
               scrolled
-                ? '/bws_updated_logo_black-removebg-preview (1) (1).png'
-                : '/bigweb_updated_logo-removebg-preview (1).png'
+                ? '/bygweb_black_text-removebg-preview (1) (1).png'
+                : '/bygweb_white_text-removebg-preview (1) (1).png'
             }
             alt="Logo"
-            className="h-20 w-auto transition-all duration-300"
+            className="h-16 w-auto transition-all duration-300 lg:pl-6"
           />
         </a>
 
@@ -48,8 +48,8 @@ const Navbar = () => {
             <a
               key={item}
               href={item === 'Home' ? '#' : `#${item.toLowerCase()}`}
-              className={`relative text-[18px] font-medium group transition-all duration-300 ${
-                item === 'Home'
+              className={`relative text-[17px] font-medium group transition-all duration-300 ${
+                item === 'Home' && item === 'Portfolio' && item === 'Services' && item === 'About'
                   ? 'bg-gradient-to-r from-[#7A63F5] to-[#159BF0] inline-block text-transparent bg-clip-text'
                   : scrolled
                   ? 'text-black'
@@ -104,7 +104,7 @@ const Navbar = () => {
             <a
               key={item}
               href={item === 'Home' ? '#' : `#${item.toLowerCase()}`}
-              className="block text-gray-700 hover:bg-gradient-to-r from-[#7A63F5] to-[#159BF0] text-lg transition duration-300"
+              className="block text-gray-700 text-lg transition duration-300"
             >
               {item}
             </a>
