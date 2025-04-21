@@ -205,7 +205,7 @@ const WebDesignAndDevelopment = () => {
       </div>
 
       {/* Marquee Container */}
-      <div className="absolute bottom-7 w-full overflow-hidden z-10 px-4">
+      <div className="absolute bottom-10 w-full overflow-hidden z-10 px-4">
   {/* Optional: Gradient Fades on Sides */}
   {/* <div className="pointer-events-none absolute top-0 bottom-0 left-0 w-32 bg-gradient-to-r from-black/80 via-black/50 to-transparent z-20" />
   <div className="pointer-events-none absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-black/80 via-black/50 to-transparent z-20" /> */}
