@@ -161,89 +161,114 @@ const WebDesignAndDevelopment = () => {
     <div className="bg-white text-gray-900">
       {/* Hero Section */}
       <section
-  className="relative w-full h-screen text-white text-center bg-cover bg-center"
-  style={{
-    backgroundImage: "url('/18707.jpg')",
-  }}
+      className="relative w-full h-screen flex items-center justify-center text-white text-center bg-cover bg-center px-4 sm:px-6 lg:px-8"
+      style={{
+        backgroundImage: "url('/18707.jpg')",
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/50 z-0" />
+
+      {/* Main Content */}
+      <div className="relative z-10 max-w-3xl mx-auto flex flex-col items-center text-center px-4">
+        <motion.h1
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-2xl sm:text-4xl md:text-5xl font-extrabold mb-4 whitespace-nowrap overflow-hidden text-ellipsis"
+        >
+          Website Design & Development
+        </motion.h1>
+
+        <motion.p
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 0.3, duration: 0.8 }}
+  className="text-sm sm:text-base md:text-lg text-white/90 max-w-md text-center"
 >
-  {/* Overlay */}
-  <div className="absolute inset-0 bg-black/40 z-0" />
+  We create beautiful, functional, and blazing-fast websites to grow your business.
+</motion.p>
 
-  {/* Main Content */}
-  <div className="relative z-10 flex flex-col items-center justify-center h-full px-6 pb-32 sm:pb-40">
-    <motion.h1
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
-      className="text-4xl sm:text-5xl md:text-6xl font-extrabold mb-6 leading-tight"
-    >
-      Website Design & Development
-    </motion.h1>
 
-    <motion.p
-      initial={{ opacity: 0, y: 50 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ delay: 0.3, duration: 0.8 }}
-      className="text-lg sm:text-xl max-w-2xl mx-auto text-white/90"
-    >
-      We create beautiful, functional, and blazing-fast websites to grow
-      your business.
-    </motion.p>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.6, duration: 0.6 }}
+          className="mt-8"
+        >
+          <Link to="/contact">
+            <button className="bg-white px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition">
+              <span className="bg-gradient-to-r from-[#7A63F5] to-[#159BF0] text-transparent bg-clip-text">
+                Get in Touch
+              </span>
+            </button>
+          </Link>
+        </motion.div>
+      </div>
 
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{ delay: 0.6, duration: 0.6 }}
-    >
-      <Link to="/contact" className="relative z-10">
-        <button className="mt-8 bg-white px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition">
-          <span className="bg-gradient-to-r from-[#7A63F5] to-[#159BF0] text-transparent bg-clip-text">
-            Get in Touch
-          </span>
-        </button>
-      </Link>
-    </motion.div>
-  </div>
+      {/* Marquee Animation */}
+      <div className="absolute bottom-20 lg:bottom-6 w-full overflow-hidden z-10 px-4 sm:px-10">
+        <div className="whitespace-nowrap animate-marquee-left flex gap-4 py-2">
+          {[...services, ...services].map((service, index) => (
+            <div
+              key={`top-${index}`}
+              className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-2 rounded-2xl shadow text-sm font-semibold gap-2"
+            >
+              <span>{service.icon}</span>
+              <span>{service.label}</span>
+            </div>
+          ))}
+        </div>
 
-  {/* Marquee Container */}
-  <div className="absolute bottom-20 lg:bottom-6 w-full overflow-hidden z-10 px-4 sm:px-10">
-    {/* Gradient Fades on Both Sides */}
-    {/* <div className="pointer-events-none absolute top-0 bottom-0 left-0 w-24 sm:w-32 bg-gradient-to-r from-black via-black/60 to-transparent z-20" />
-    <div className="pointer-events-none absolute top-0 bottom-0 right-0 w-24 sm:w-32 bg-gradient-to-l from-black via-black/60 to-transparent z-20" /> */}
+        <div className="whitespace-nowrap animate-marquee-right flex gap-4 py-2 mt-2">
+          {[...services, ...services].map((service, index) => (
+            <div
+              key={`bottom-${index}`}
+              className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-2 rounded-2xl shadow text-sm font-semibold gap-2"
+            >
+              <span>{service.icon}</span>
+              <span>{service.label}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
 
-    {/* Top Marquee Row (Left to Right) */}
-    <div className="whitespace-nowrap animate-marqueeLeft flex gap-4 py-2">
-      {Array(2)
-        .fill(services)
-        .flat()
-        .map((service, index) => (
-          <div
-            key={`top-${index}`}
-            className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-2 rounded-2xl shadow text-sm font-semibold gap-2"
-          >
-            <span className="text-white">{service.icon}</span>
-            <span>{service.label}</span>
-          </div>
-        ))}
-    </div>
+    {/* Service information */}
+    <section className="w-full bg-white px-6 py-16 md:px-12 lg:px-20 font-[Inter]">
+      <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start justify-between gap-12">
+        
+        {/* Left Side */}
+        <div className="md:w-1/2">
+          <h2 className="text-3xl md:text-4xl font-semibold text-black leading-snug">
+            Full-Stack{" "}
+            <span className="font-bold relative inline-block">
+              Web Development
+              <span className="absolute left-0 bottom-0 w-full h-1 bg-yellow-400 -z-10"></span>
+            </span>{" "}
+            <br />
+            <span className="font-bold relative inline-block">
+              Services
+              <span className="absolute left-0 bottom-0 w-full h-1 bg-yellow-400 -z-10"></span>
+            </span>{" "}
+            to Achieve Your <br /> Business Goals
+          </h2>
+          {/* Optional gradient underline below heading */}
+          <div className="mt-4 w-32 h-1 bg-gradient-to-r from-pink-500 to-indigo-500"></div>
+        </div>
 
-    {/* Bottom Marquee Row (Right to Left) */}
-    <div className="whitespace-nowrap animate-marqueeRight flex gap-4 py-2 mt-2">
-      {Array(2)
-        .fill(services)
-        .flat()
-        .map((service, index) => (
-          <div
-            key={`bottom-${index}`}
-            className="inline-flex items-center bg-white/10 backdrop-blur-md border border-white/20 text-white px-6 py-2 rounded-2xl shadow text-sm font-semibold gap-2 text-black px-6 py-2 rounded-2xl shadow text-sm font-semibold gap-2"
-          >
-            <span className="text-white">{service.icon}</span>
-            <span>{service.label}</span>
-          </div>
-        ))}
-    </div>
-  </div>
-</section>
+        {/* Right Side */}
+        <div className="md:w-1/2 text-gray-700 text-base md:text-lg leading-relaxed">
+          <p className="mb-4">
+            <a href="#" className="text-blue-600 font-medium hover:underline">Web app development services</a> by <span className="font-semibold text-black">BigWeb</span> aid in creating, maintaining, and improving web-based applications. We’re a trusted web development agency, offering advanced engineering for efficient, scalable, and user-friendly platforms including customer-facing web apps, SaaS products, admin dashboards, and more.
+          </p>
+          <p className="text-gray-500">
+            Partnering with BigWeb helps you rapidly grow your digital presence, tap into new channels, improve customer conversion, boost ROI, and achieve key business milestones — all with a tech-driven approach tailored to your goals.
+          </p>
+        </div>
+
+      </div>
+    </section>
 
 
       {/* Features Section */}
