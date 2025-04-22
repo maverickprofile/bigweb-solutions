@@ -46,6 +46,7 @@ function App() {
             <>
               <Navbar />
               <WebDesignAndDevelopment />
+              <BookSection />
               <Footer />
             </>
           }

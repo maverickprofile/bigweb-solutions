@@ -5,7 +5,7 @@ import {
   BookOpen, Globe, PenTool, Monitor, TrendingUp, Megaphone, User,
   Package, ShoppingCart, Smartphone, Film, Brush, Share2,
   UserPlus, Mail, Users, PhoneCall, DollarSign, MessageSquare,
-  Linkedin, Contact2,
+  Linkedin, Contact2,Workflow
 } from "lucide-react";
 
 const services = [
@@ -71,50 +71,10 @@ const services = [
     description: "Custom mobile app development for iOS and Android platforms.",
   },
   {
-    icon: UserPlus,
-    title: "Pre Sales",
-    description: "Strategy and support to convert potential leads into loyal customers.",
+    icon: Workflow,
+    title: "Business Automation",
+    description: "Streamline operations and boost productivity with smart automated workflows tailored to your business needs.",
   },
-  {
-    icon: Mail,
-    title: "Cold Email",
-    description: "Automated and targeted cold email campaigns to boost outreach.",
-  },
-  {
-    icon: Users,
-    title: "Personal Assistant",
-    description: "Virtual assistance for tasks, scheduling, and efficient workflows.",
-  },
-  {
-    icon: PhoneCall,
-    title: "Call Analysis",
-    description: "Detailed call reviews and performance insights for your sales team.",
-  },
-  {
-    icon: TrendingUp,
-    title: "Consulting",
-    description: "Expert business and marketing consulting tailored to your growth goals.",
-  },
-  {
-    icon: DollarSign,
-    title: "Sales",
-    description: "End-to-end sales support to drive revenue and client acquisition.",
-  },
-  {
-    icon: MessageSquare,
-    title: "WhatsApp",
-    description: "WhatsApp automation and communication tools for customer engagement.",
-  },
-  {
-    icon: Linkedin,
-    title: "LinkedIn",
-    description: "LinkedIn lead generation and profile optimization for professionals.",
-  },
-  {
-    icon: Contact2,
-    title: "Leads",
-    description: "Targeted lead generation strategies to fill your sales pipeline.",
-  }
 ];
 
 const fadeUp = {

@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 import { Link } from "react-router-dom";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+
 import {
     FaLaptopCode,
     FaPencilRuler,
@@ -118,23 +120,45 @@ const projects = [
   
 
 // Why Choose Us Array
-const whyChooseUs = [
-    {
-      icon: <FaThumbsUp className="text-4xl text-indigo-600" />,
-      title: "Proven Track Record",
-      desc: "Hundreds of successful launches and satisfied clients across industries.",
-    },
-    {
-      icon: <FaClock className="text-4xl text-rose-500" />,
-      title: "On-Time Delivery",
-      desc: "We meet deadlines without compromising quality or functionality.",
-    },
-    {
-      icon: <FaShieldAlt className="text-4xl text-green-600" />,
-      title: "Secure & Scalable",
-      desc: "Our solutions are built with security and scalability in mind.",
-    },
-  ];
+const approachSteps = [
+  {
+    step: "01",
+    title: "Discovery & Research",
+    desc: "We begin by understanding your goals, audience, and competitors to tailor the perfect solution.",
+    image: "/images/step1.jpg",
+  },
+  {
+    step: "02",
+    title: "Strategy & Planning",
+    desc: "We create a clear roadmap and timeline for your project to ensure smooth execution.",
+    image: "/images/step2.jpg",
+  },
+  {
+    step: "03",
+    title: "Design & Prototyping",
+    desc: "We craft intuitive and beautiful UI/UX designs to captivate your users.",
+    image: "/images/step3.jpg",
+  },
+  {
+    step: "04",
+    title: "Development",
+    desc: "Using modern tech, we develop your product with performance and scalability in mind.",
+    image: "/images/step4.jpg",
+  },
+  {
+    step: "05",
+    title: "Testing & Launch",
+    desc: "We test rigorously to fix bugs, polish UX, and launch a flawless product.",
+    image: "/images/step5.jpg",
+  },
+  {
+    step: "06",
+    title: "Support & Scale",
+    desc: "We provide continuous support and help scale your product as your business grows.",
+    image: "/images/step6.jpg",
+  },
+];
+
 
 const WebDesignAndDevelopment = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -240,10 +264,10 @@ const WebDesignAndDevelopment = () => {
         
         {/* Left Side */}
         <div className="md:w-1/2">
-          <h2 className="text-3xl md:text-4xl font-semibold text-black leading-snug">
-            Full-Stack{" "}
+          <h2 className="text-3xl md:text-4xl font-bold text-black leading-snug">
+            Website Design{" "}
             <span className="font-bold relative inline-block">
-              Web Development
+              & Development
               <span className="absolute left-0 bottom-0 w-full h-1 bg-yellow-400 -z-10"></span>
             </span>{" "}
             <br />
@@ -363,33 +387,40 @@ const WebDesignAndDevelopment = () => {
 
 
       {/* Why Choose Us Section */}
-      <section className="bg-gray-100 py-20 px-6">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Why Choose BygWeb?
-          </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto mb-12">
-            Discover the key reasons our clients love working with us.
-          </p>
+      
+      <section className="py-20 px-6 sm:px-10 bg-gray-50">
+  <div className="max-w-6xl mx-auto text-center">
+    <motion.h2
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="text-3xl sm:text-4xl font-bold mb-4"
+    >
+      Why Choose BygWeb?
+    </motion.h2>
+    <p className="text-gray-600 max-w-2xl mx-auto mb-12">
+      From idea to launch and beyond — we bring strategy, design, and development together to deliver scalable digital solutions that drive growth.
+    </p>
 
-          <div className="grid gap-10 md:grid-cols-3">
-            {whyChooseUs.map((item, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.2, duration: 0.6 }}
-                viewport={{ once: true }}
-                className="bg-white p-8 rounded-2xl shadow-md hover:shadow-xl transition-all"
-              >
-                <div className="mb-4 flex justify-center">{item.icon}</div>
-                <h4 className="text-xl font-semibold mb-2">{item.title}</h4>
-                <p className="text-gray-600">{item.desc}</p>
-              </motion.div>
-            ))}
+    <div className="grid md:grid-cols-3 sm:grid-cols-2 gap-8">
+      {approachSteps.map((step, index) => (
+        <motion.div
+          key={index}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ delay: index * 0.1 }}
+          className="bg-white shadow-md rounded-lg p-6 text-left border-t-4 border-[#686DF7] hover:shadow-lg transition"
+        >
+          <div className="text-2xl font-bold text-[#686DF7] mb-2">
+            {step.step}
           </div>
-        </div>
-      </section>
+          <h3 className="text-lg font-semibold mb-2">{step.title}</h3>
+          <p className="text-gray-600 text-sm">{step.desc}</p>
+        </motion.div>
+      ))}
+    </div>
+  </div>
+</section>
 
     </div>
   );
